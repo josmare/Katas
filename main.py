@@ -20,14 +20,8 @@ def array_diff(a, b):
     return x
 
 
-def wave(people):
-    ll = list()
-    for i in range(0, people.__len__()):
-        lt = list(people)
-        if lt[i] is not ' ':
-            lt[i] = lt[i].upper()
-            ll.append(''.join(lt))
-    return ll
+def wave(str):
+    return return [str[:i] + str[i].upper() + str[i+1:] for i in range(len(str)) if str[i].isalpha()]
 
 
 def dict_replacer(string, dictionary):
